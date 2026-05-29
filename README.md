@@ -64,7 +64,7 @@ jupyter notebook notebooks/eda_analysis.ipynb
 👉 [Click here to view the full report](https://saibharath0618.github.io/Data-Analyst-Jobs-India-2024-EDA/)
 
 ## 📅 Dataset
-- Source: Naukri, Hirist, IIMJobs
+- Source: Naukri, Linkdin
 - Date: 7th July 2024
 - Records: 1,561 listings | 10 cities
 
