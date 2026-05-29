@@ -9,8 +9,9 @@
 ## 🖼️ Project Preview
 | | |
 |---|---|
-| ![](chart1_jobs_by_city.png) | ![](charts/chart2_top_skills.png) |
-| ![](charts/chart3_salary.png) | ![](charts/chart4_experience.png) |
+| ![](chart1_jobs_by_city.png) | ![](chart3_salary.png) |
+| ![](chart5_companies.png) | ![](chart6_remote.png) |
+| ![](chart8_salary_vs_exp.png) |
 
 ## 🔍 About
 EDA of **1,561 Data Analyst job listings** scraped from
