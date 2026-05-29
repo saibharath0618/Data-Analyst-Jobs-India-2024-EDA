@@ -11,7 +11,7 @@
 |---|---|
 | ![](chart1_jobs_by_city.png) | ![](chart3_salary.png) |
 | ![](chart5_companies.png) | ![](chart6_remote.png) |
-| ![](chart8_salary_vs_exp.png) |
+| ![](chart8_salary_vs_exp.png) | ![](chart7_ratings.png) |
 
 ## 🔍 About
 EDA of **1,561 Data Analyst job listings** scraped from
