@@ -1,7 +1,17 @@
 # 📊 Data Analyst Jobs India — 2024 EDA
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-green?style=flat)
+
+## 🖼️ Project Preview
+![Jobs by City](charts/chart1_jobs_by_city.png)
+
 ## 🔍 About
-EDA of **1,561 Data Analyst job listings** scraped from Naukri, Hirist & IIMJobs on July 2024.
+EDA of **1,561 Data Analyst job listings** scraped from 
+Naukri, Hirist & IIMJobs on July 2024.
 
 ## 💡 Key Insights
 - 🏙️ Bengaluru = #1 city — 380 jobs, ₹15.4L avg salary
@@ -13,8 +23,29 @@ EDA of **1,561 Data Analyst job listings** scraped from Naukri, Hirist & IIMJobs
 - ⭐ Hyderabad has highest company rating (3.95 avg)
 - 📉 Experience vs Salary correlation = 0.401 (moderate positive)
 
+## 📊 Analysis Charts
+
+| Chart | Title |
+|-------|-------|
+| 1 | 🏙️ Top Cities for Data Analyst Jobs |
+| 2 | 🛠️ Top 15 In-Demand Skills |
+| 3 | 💰 Salary Analysis & Distribution |
+| 4 | 📈 Job Demand by Experience Level |
+| 5 | 🏢 Top Companies Hiring |
+| 6 | 🌐 Remote vs On-site Analysis |
+| 7 | ⭐ Company Ratings Analysis |
+| 8 | 📉 Experience vs Salary Correlation |
+
 ## 🛠️ Tools Used
-- Python, Pandas, Matplotlib, Jupyter Notebook
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+
+- **Python** — core programming
+- **Pandas** — data cleaning & analysis  
+- **Matplotlib** — 8 visualisation charts
+- **Jupyter Notebook** — analysis environment
 
 ## 📁 Files
 | File | Description |
@@ -31,9 +62,16 @@ jupyter notebook notebooks/eda_analysis.ipynb
 ```
 
 ## 🌐 Live Report
-👉 [Click here to view the full report](https://github.com/saibharath0618/Data-Analyst-Jobs-India-2024-EDA/blob/main/README.md)
+👉 [Click here to view the full report](https://saibharath0618.github.io/Data-Analyst-Jobs-India-2024-EDA/)
 
 ## 📅 Dataset
 - Source: Naukri, Hirist, IIMJobs
 - Date: 7th July 2024
 - Records: 1,561 listings | 10 cities
+
+## 🙋 About Me
+**Sai Bharath** — Aspiring Data Analyst  
+Passionate about turning raw data into actionable insights.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/saibharath0618)
