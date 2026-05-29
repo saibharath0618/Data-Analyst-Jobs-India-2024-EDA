@@ -7,10 +7,13 @@
 ![Status](https://img.shields.io/badge/Status-Completed-green?style=flat)
 
 ## 🖼️ Project Preview
-![Jobs by City](charts/chart1_jobs_by_city.png)
+| | |
+|---|---|
+| ![](charts/chart1_jobs_by_city.png) | ![](charts/chart2_top_skills.png) |
+| ![](charts/chart3_salary.png) | ![](charts/chart4_experience.png) |
 
 ## 🔍 About
-EDA of **1,561 Data Analyst job listings** scraped from 
+EDA of **1,561 Data Analyst job listings** scraped from
 Naukri, Hirist & IIMJobs on July 2024.
 
 ## 💡 Key Insights
@@ -37,13 +40,8 @@ Naukri, Hirist & IIMJobs on July 2024.
 | 8 | 📉 Experience vs Salary Correlation |
 
 ## 🛠️ Tools Used
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
-
 - **Python** — core programming
-- **Pandas** — data cleaning & analysis  
+- **Pandas** — data cleaning & analysis
 - **Matplotlib** — 8 visualisation charts
 - **Jupyter Notebook** — analysis environment
 
@@ -70,8 +68,8 @@ jupyter notebook notebooks/eda_analysis.ipynb
 - Records: 1,561 listings | 10 cities
 
 ## 🙋 About Me
-**Sai Bharath** — Aspiring Data Analyst  
+**Patakanoor Sai Bharath** — Aspiring Data Analyst
 Passionate about turning raw data into actionable insights.
 
-[![LinkedIn](www.linkedin.com/in/patakanoor-sai-bharath-02643125b)](https://linkedin.com/in/your-profile)
-[![GitHub]([https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white](https://github.com/saibharath0618))](https://github.com/saibharath0618)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/patakanoor-sai-bharath-02643125b)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/saibharath0618)
