@@ -31,7 +31,7 @@ jupyter notebook notebooks/eda_analysis.ipynb
 ```
 
 ## 🌐 Live Report
-👉 [Click here to view the full report](https://saibharath0618.github.io/Data-Analyst-Jobs-India-2024-EDA/)
+👉 [Click here to view the full report](https://github.com/saibharath0618/Data-Analyst-Jobs-India-2024-EDA/blob/main/README.md)
 
 ## 📅 Dataset
 - Source: Naukri, Hirist, IIMJobs
