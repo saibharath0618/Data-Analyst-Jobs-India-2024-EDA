@@ -73,5 +73,5 @@ jupyter notebook notebooks/eda_analysis.ipynb
 **Sai Bharath** — Aspiring Data Analyst  
 Passionate about turning raw data into actionable insights.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/saibharath0618)
+[![LinkedIn](www.linkedin.com/in/patakanoor-sai-bharath-02643125b)](https://linkedin.com/in/your-profile)
+[![GitHub]([https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white](https://github.com/saibharath0618))](https://github.com/saibharath0618)
