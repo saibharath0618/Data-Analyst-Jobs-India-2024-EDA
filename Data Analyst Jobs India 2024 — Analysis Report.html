@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/User/OneDrive/Desktop/linkdin%20analysis/presentation.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Analyst Jobs India 2024 — Analysis Report</title>
+<link href="./Data Analyst Jobs India 2024 — Analysis Report_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --blue:    #1A56DB;
+    --green:   #0E9F6E;
+    --orange:  #E3760C;
+    --purple:  #7C3AED;
+    --red:     #E02424;
+    --ink:     #0F172A;
+    --ink2:    #334155;
+    --ink3:    #64748B;
+    --paper:   #F8FAFC;
+    --card:    #FFFFFF;
+    --border:  #E2E8F0;
+    --accent:  #DBEAFE;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ font-family:'DM Sans',times new roman; background:var(--paper); color:var(--ink); }
+
+  /* ── COVER ── */
+  .cover{
+    min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+    background:var(--ink); color:#fff; padding:60px 80px; position:relative; overflow:hidden;
+  }
+  .cover::before{
+    content:''; position:absolute; inset:0;
+    background: radial-gradient(ellipse 80% 60% at 70% 40%, #1A56DB22 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 20% 80%, #7C3AED18 0%, transparent 60%);
+  }
+  .cover-label{ font-family:'Syne',times new roman; font-size:11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#94A3B8; margin-bottom:24px; }
+  .cover-title{ font-family:'Syne',times new roman; font-size:clamp(36px,5vw,64px); font-weight:800; line-height:1.05; margin-bottom:20px; }
+  .cover-title span{ color:#60A5FA; }
+  .cover-sub{ font-size:17px; color:#94A3B8; font-weight:300; margin-bottom:48px; max-width:560px; line-height:1.6; }
+  .cover-stats{ display:flex; gap:48px; }
+  .cover-stat .val{ font-family:'Syne',times new roman; font-size:36px; font-weight:700; color:#60A5FA; }
+  .cover-stat .lbl{ font-size:12px; color:#64748B; margin-top:4px; }
+  .cover-corner{ position:absolute; right:80px; top:50%; transform:translateY(-50%); opacity:.06; font-family:'Syne',sans-serif; font-size:220px; font-weight:800; line-height:1; pointer-events:none; }
+
+  /* ── SECTION WRAPPER ── */
+  .section{ padding:72px 80px; border-bottom:1px solid var(--border); }
+  .section:nth-child(even){ background:#fff; }
+  .section-num{ font-family:'Syne',sans-serif; font-size:11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--blue); margin-bottom:8px; }
+  .section-title{ font-family:'Syne',sans-serif; font-size:clamp(24px,3vw,36px); font-weight:700; color:var(--ink); margin-bottom:6px; line-height:1.15; }
+  .section-desc{ font-size:15px; color:var(--ink3); margin-bottom:40px; max-width:600px; line-height:1.6; }
+
+  /* ── KPI CARDS ── */
+  .kpi-row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:16px; margin-bottom:40px; }
+  .kpi{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px 20px; position:relative; overflow:hidden; }
+  .kpi::after{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--accent-c,var(--blue)); border-radius:16px 16px 0 0; }
+  .kpi-val{ font-family:'Syne',sans-serif; font-size:32px; font-weight:700; color:var(--ink); line-height:1; margin-bottom:6px; }
+  .kpi-lbl{ font-size:12px; color:var(--ink3); line-height:1.4; }
+  .kpi-icon{ position:absolute; right:16px; top:20px; font-size:22px; opacity:.15; }
+
+  /* ── INSIGHT CARDS ── */
+  .insights-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+  .insight{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; display:flex; gap:16px; }
+  .insight-icon{ width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; }
+  .insight-title{ font-family:'Syne',sans-serif; font-size:14px; font-weight:600; color:var(--ink); margin-bottom:6px; }
+  .insight-text{ font-size:13px; color:var(--ink2); line-height:1.6; }
+  .insight-tag{ display:inline-block; font-size:10px; font-weight:600; padding:2px 8px; border-radius:20px; margin-top:8px; letter-spacing:.05em; text-transform:uppercase; }
+
+  /* ── HORIZONTAL BAR CHART ── */
+  .bar-chart{ display:flex; flex-direction:column; gap:10px; }
+  .bar-item{ display:grid; grid-template-columns:150px 1fr 50px; align-items:center; gap:12px; }
+  .bar-item-lbl{ font-size:13px; color:var(--ink2); text-align:right; font-weight:500; }
+  .bar-track{ background:#F1F5F9; border-radius:6px; height:22px; overflow:hidden; }
+  .bar-fill{ height:100%; border-radius:6px; display:flex; align-items:center; padding-left:10px; font-size:11px; font-weight:600; color:#fff; transition:width 1s; }
+  .bar-count{ font-family:'Syne',sans-serif; font-size:13px; font-weight:600; color:var(--ink); }
+
+  /* ── 2 COL LAYOUT ── */
+  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+  @media(max-width:720px){ .two-col{ grid-template-columns:1fr; } .cover{ padding:40px 28px; } .section{ padding:48px 28px; } .cover-corner{ display:none; } .cover-stats{ gap:24px; } .bar-item{ grid-template-columns:100px 1fr 40px; } }
+
+  /* ── SKILL PILLS ── */
+  .skill-wrap{ display:flex; flex-wrap:wrap; gap:10px; }
+  .skill-pill{ display:flex; align-items:center; gap:8px; background:var(--card); border:1px solid var(--border); border-radius:50px; padding:8px 16px; }
+  .skill-pill-rank{ font-family:'Syne',sans-serif; font-size:11px; font-weight:700; color:var(--ink3); }
+  .skill-pill-name{ font-size:13px; font-weight:500; color:var(--ink); }
+  .skill-pill-count{ font-family:'Syne',sans-serif; font-size:12px; font-weight:600; padding:2px 8px; border-radius:20px; }
+
+  /* ── QUOTE / HIGHLIGHT ── */
+  .highlight-box{ background:var(--ink); color:#fff; border-radius:20px; padding:36px 40px; margin:40px 0; }
+  .highlight-box .hl-label{ font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:#60A5FA; font-weight:600; margin-bottom:12px; }
+  .highlight-box .hl-text{ font-family:'Syne',sans-serif; font-size:clamp(18px,2.5vw,26px); font-weight:600; line-height:1.4; color:#F8FAFC; }
+  .highlight-box .hl-sub{ font-size:14px; color:#94A3B8; margin-top:12px; line-height:1.6; }
+
+  /* ── SALARY TABLE ── */
+  .sal-table{ width:100%; border-collapse:collapse; }
+  .sal-table th{ font-family:'Syne',sans-serif; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--ink3); padding:0 16px 12px; text-align:left; border-bottom:2px solid var(--border); }
+  .sal-table td{ padding:14px 16px; font-size:14px; border-bottom:1px solid var(--border); color:var(--ink2); }
+  .sal-table tr:last-child td{ border-bottom:none; }
+  .sal-table .city-name{ font-weight:500; color:var(--ink); }
+  .sal-bar{ height:8px; border-radius:4px; display:inline-block; }
+  .best-row td{ background:#F0FDF4; }
+  .sal-badge{ display:inline-block; font-size:10px; font-weight:600; padding:2px 8px; border-radius:20px; margin-left:8px; }
+
+  /* ── CONCLUSION ── */
+  .conclusion{ background:linear-gradient(135deg,#1e3a5f 0%,#0F172A 100%); color:#fff; }
+  .conclusion .section-num{ color:#60A5FA; }
+  .conclusion .section-title{ color:#F8FAFC; }
+  .conclusion .section-desc{ color:#94A3B8; }
+  .rec-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .rec-card{ background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:24px; }
+  .rec-num{ font-family:'Syne',sans-serif; font-size:36px; font-weight:800; color:#60A5FA; line-height:1; margin-bottom:12px; }
+  .rec-title{ font-family:'Syne',sans-serif; font-size:14px; font-weight:600; color:#F8FAFC; margin-bottom:8px; }
+  .rec-text{ font-size:13px; color:#94A3B8; line-height:1.6; }
+
+  /* ── FOOTER ── */
+  .footer{ background:var(--ink); color:#475569; text-align:center; padding:32px; font-size:13px; }
+  .footer strong{ color:#94A3B8; }
+
+  /* ── ANIM ── */
+  @keyframes fadeUp{ from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  .section{ animation:fadeUp .5s ease both; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     COVER PAGE
+══════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-corner">DA</div>
+  <div style="position:relative;z-index:1">
+    <div class="cover-label">Data Analytics Portfolio Project</div>
+    <h1 class="cover-title">Data Analyst<br>Jobs India<br><span>2024 Report</span></h1>
+    <p class="cover-sub">An exploratory data analysis of 1,561 job listings scraped on 7th July 2024 — uncovering where the jobs are, what skills are in demand, and what salaries to expect.</p>
+    <div class="cover-stats">
+      <div class="cover-stat"><div class="val">1,561</div><div class="lbl">Job listings analysed</div></div>
+      <div class="cover-stat"><div class="val">8</div><div class="lbl">Key analyses</div></div>
+      <div class="cover-stat"><div class="val">10</div><div class="lbl">Cities covered</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 1 — EXECUTIVE SUMMARY
+══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">01 — Executive Summary</div>
+  <h2 class="section-title">The state of Data Analyst hiring in India</h2>
+  <p class="section-desc">A snapshot of 1,561 job listings across India's top portals — Naukri, Hirist, IIMJobs, and more — analysed to surface actionable insights for aspiring and experienced data analysts.</p>
+
+  <div class="kpi-row">
+    <div class="kpi" style="--accent-c:var(--blue)">
+      <div class="kpi-icon">📍</div>
+      <div class="kpi-val">380</div>
+      <div class="kpi-lbl">Jobs in Bengaluru<br><span style="color:var(--blue);font-weight:600">#1 city — 24.3%</span> of all listings</div>
+    </div>
+    <div class="kpi" style="--accent-c:var(--green)">
+      <div class="kpi-icon">🛠</div>
+      <div class="kpi-val">281</div>
+      <div class="kpi-lbl">Jobs requiring SQL<br><span style="color:var(--green);font-weight:600">Most demanded</span> technical skill</div>
+    </div>
+    <div class="kpi" style="--accent-c:var(--orange)">
+      <div class="kpi-icon">💰</div>
+      <div class="kpi-val">₹9.25L</div>
+      <div class="kpi-lbl">Median salary/year<br><span style="color:var(--orange);font-weight:600">343 jobs</span> with disclosed pay</div>
+    </div>
+    <div class="kpi" style="--accent-c:var(--purple)">
+      <div class="kpi-icon">📈</div>
+      <div class="kpi-val">48.2%</div>
+      <div class="kpi-lbl">Jobs want 2–5 yrs exp<br><span style="color:var(--purple);font-weight:600">Most in-demand</span> experience band</div>
+    </div>
+    <div class="kpi" style="--accent-c:var(--red)">
+      <div class="kpi-icon">🌐</div>
+      <div class="kpi-val">3.5%</div>
+      <div class="kpi-lbl">Jobs are remote<br><span style="color:var(--red);font-weight:600">Only 55</span> out of 1,561</div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="hl-label">Key finding</div>
+    <div class="hl-text">"India's data analyst job market is overwhelmingly concentrated in Bengaluru — and SQL remains the single most critical skill, appearing in nearly 1 in 5 job listings."</div>
+    <div class="hl-sub">Source: dataAnalystJobsIndia_7th_July_2024.csv · Tools: Python, Pandas, Matplotlib</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 2 — JOBS BY CITY
+══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">02 — Geographic Analysis</div>
+  <h2 class="section-title">Where are the jobs?</h2>
+  <p class="section-desc">Bengaluru dominates but the South and West together account for over 60% of all Data Analyst openings in India.</p>
+
+  <div class="two-col">
+    <div class="bar-chart">
+      <div class="bar-item">
+        <div class="bar-item-lbl">Bengaluru</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--blue)">380</div></div>
+        <div class="bar-count">380</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-lbl">Mumbai</div>
+        <div class="bar-track"><div class="bar-fill" style="width:57.6%;background:var(--green)">219</div></div>
+        <div class="bar-count">219</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-lbl">Chennai</div>
+        <div class="bar-track"><div class="bar-fill" style="width:38.9%;background:var(--orange)">148</div></div>
+        <div class="bar-count">148</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-lbl">Hyderabad</div>
+        <div class="bar-track"><div class="bar-fill" style="width:36.6%;background:var(--purple)">139</div></div>
+        <div class="bar-count">139</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-lbl">Gurugram</div>
+        <div class="bar-track"><div class="bar-fill" style="width:31.8%;background:#0891B2)">121</div></div>
+        <div class="bar-count">121</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-lbl">Pune</div>
+        <div class="bar-track"><div class="bar-fill" style="width:29.5%;background:#0891B2">112</div></div>
+        <div class="bar-count">112</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-lbl">Delhi</div>
+        <div class="bar-track"><div class="bar-fill" style="width:18.2%;background:#BE185D">69</div></div>
+        <div class="bar-count">69</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-item-lbl">Remote</div>
+        <div class="bar-track"><div class="bar-fill" style="width:14.5%;background:#64748B">55</div></div>
+        <div class="bar-count">55</div>
+      </div>
+    </div>
+    <div>
+      <div class="insights-grid" style="grid-template-columns:1fr">
+        <div class="insight">
+          <div class="insight-icon" style="background:#DBEAFE">📍</div>
+          <div>
+            <div class="insight-title">Bengaluru is India's data capital</div>
+            <div class="insight-text">With 380 listings, Bengaluru has 73% more jobs than Mumbai (219) — the second ranked city. If you're serious about a data career, Bengaluru is where the market is.</div>
+            <div class="insight-tag" style="background:#DBEAFE;color:var(--blue)">City Analysis</div>
+          </div>
+        </div>
+        <div class="insight">
+          <div class="insight-icon" style="background:#FEF3C7">🌐</div>
+          <div>
+            <div class="insight-title">Remote work is extremely rare</div>
+            <div class="insight-text">Only 55 out of 1,561 jobs (3.5%) are remote. However, remote roles pay ₹28.2L avg — 2.4× more than on-site (₹11.9L). The tradeoff is very real.</div>
+            <div class="insight-tag" style="background:#FEF3C7;color:#92400E">Remote Insight</div>
+          </div>
+        </div>
+        <div class="insight">
+          <div class="insight-icon" style="background:#F3E8FF">🗺</div>
+          <div>
+            <div class="insight-title">NCR: Gurugram beats Noida 3:1</div>
+            <div class="insight-text">In the Delhi NCR region, Gurugram has 121 jobs vs Noida's 46. If you're targeting the Delhi market, Gurugram-focused companies give you far better odds.</div>
+            <div class="insight-tag" style="background:#F3E8FF;color:var(--purple)">Regional Tip</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 3 — TOP SKILLS
+══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">03 — Skills Analysis</div>
+  <h2 class="section-title">What skills do you actually need?</h2>
+  <p class="section-desc">Extracted from 1,561 job descriptions — ranked by how many listings mention each skill. Build these in order.</p>
+
+  <div class="skill-wrap" style="margin-bottom:32px">
+    <div class="skill-pill"><span class="skill-pill-rank">#1</span><span class="skill-pill-name">SQL</span><span class="skill-pill-count" style="background:#DBEAFE;color:var(--blue)">281</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#2</span><span class="skill-pill-name">Python</span><span class="skill-pill-count" style="background:#D1FAE5;color:var(--green)">154</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#3</span><span class="skill-pill-name">Power BI</span><span class="skill-pill-count" style="background:#FEF3C7;color:#92400E">133</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#4</span><span class="skill-pill-name">Analytics</span><span class="skill-pill-count" style="background:#FEF3C7;color:#92400E">133</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#5</span><span class="skill-pill-name">Tableau</span><span class="skill-pill-count" style="background:#F3E8FF;color:var(--purple)">69</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#6</span><span class="skill-pill-name">Excel</span><span class="skill-pill-count" style="background:#F3E8FF;color:var(--purple)">61</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#7</span><span class="skill-pill-name">Business Intelligence</span><span class="skill-pill-count" style="background:#FEE2E2;color:var(--red)">54</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#8</span><span class="skill-pill-name">Data Visualization</span><span class="skill-pill-count" style="background:#FEE2E2;color:var(--red)">50</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#9</span><span class="skill-pill-name">SAS</span><span class="skill-pill-count" style="background:#E0F2FE;color:#0369A1">49</span></div>
+    <div class="skill-pill"><span class="skill-pill-rank">#10</span><span class="skill-pill-name">Automation</span><span class="skill-pill-count" style="background:#E0F2FE;color:#0369A1">49</span></div>
+  </div>
+
+  <div class="insights-grid">
+    <div class="insight">
+      <div class="insight-icon" style="background:#DBEAFE">🥇</div>
+      <div>
+        <div class="insight-title">SQL is non-negotiable</div>
+        <div class="insight-text">SQL appears in 281 jobs — more than Python (154) and Power BI (133) combined. If you learn only one skill, make it SQL.</div>
+        <div class="insight-tag" style="background:#DBEAFE;color:var(--blue)">Must Learn First</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-icon" style="background:#D1FAE5">📊</div>
+      <div>
+        <div class="insight-title">Power BI ties with Analytics</div>
+        <div class="insight-text">Both Power BI and "Analytics" appear 133 times each. Dashboard skills are as valued as analytical thinking itself in 2024 India.</div>
+        <div class="insight-tag" style="background:#D1FAE5;color:var(--green)">Dashboard Skill</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-icon" style="background:#FEF3C7">💡</div>
+      <div>
+        <div class="insight-title">The winning combo: SQL + Python + Power BI</div>
+        <div class="insight-text">These 3 skills together cover 568 job mentions. Master all three and you're qualified for the majority of listings in this dataset.</div>
+        <div class="insight-tag" style="background:#FEF3C7;color:#92400E">Career Strategy</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 4 — SALARY
+══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">04 — Salary Analysis</div>
+  <h2 class="section-title">What can you realistically earn?</h2>
+  <p class="section-desc">Based on 343 jobs (22%) that disclosed salary. 78% of listings in India don't share salary upfront — this is a well-known market pattern.</p>
+
+  <table class="sal-table">
+    <thead>
+      <tr>
+        <th>City</th>
+        <th>Avg Salary</th>
+        <th>Visual</th>
+        <th>vs Median</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="best-row">
+        <td class="city-name">Bengaluru <span class="sal-badge" style="background:#D1FAE5;color:var(--green)">Best</span></td>
+        <td style="font-family:&#39;Syne&#39;,sans-serif;font-weight:700;color:var(--green)">₹15.4L</td>
+        <td><span class="sal-bar" style="width:100%;background:var(--green)"></span></td>
+        <td style="color:var(--green);font-weight:600">+66.5%</td>
+      </tr>
+      <tr>
+        <td class="city-name">Hyderabad</td>
+        <td style="font-family:&#39;Syne&#39;,sans-serif;font-weight:600">₹13.9L</td>
+        <td><span class="sal-bar" style="width:90%;background:#0891B2"></span></td>
+        <td style="color:#0891B2;font-weight:600">+50.3%</td>
+      </tr>
+      <tr>
+        <td class="city-name">Delhi</td>
+        <td style="font-family:&#39;Syne&#39;,sans-serif;font-weight:600">₹12.6L</td>
+        <td><span class="sal-bar" style="width:82%;background:var(--blue)"></span></td>
+        <td style="color:var(--blue);font-weight:600">+36.2%</td>
+      </tr>
+      <tr>
+        <td class="city-name">Gurugram</td>
+        <td style="font-family:&#39;Syne&#39;,sans-serif;font-weight:600">₹10.2L</td>
+        <td><span class="sal-bar" style="width:66%;background:var(--purple)"></span></td>
+        <td style="color:var(--purple);font-weight:600">+10.3%</td>
+      </tr>
+      <tr>
+        <td class="city-name">Mumbai</td>
+        <td style="font-family:&#39;Syne&#39;,sans-serif;font-weight:600">₹10.8L</td>
+        <td><span class="sal-bar" style="width:70%;background:var(--orange)"></span></td>
+        <td style="color:var(--orange);font-weight:600">+16.8%</td>
+      </tr>
+      <tr>
+        <td class="city-name">Pune</td>
+        <td style="font-family:&#39;Syne&#39;,sans-serif;font-weight:600">₹9.5L</td>
+        <td><span class="sal-bar" style="width:62%;background:#64748B"></span></td>
+        <td style="color:#64748B;font-weight:600">+2.7%</td>
+      </tr>
+      <tr>
+        <td class="city-name">Chennai</td>
+        <td style="font-family:&#39;Syne&#39;,sans-serif;font-weight:600">₹9.1L</td>
+        <td><span class="sal-bar" style="width:59%;background:#BE185D"></span></td>
+        <td style="color:#BE185D;font-weight:600">−1.6%</td>
+      </tr>
+      <tr>
+        <td class="city-name">Noida <span class="sal-badge" style="background:#FEE2E2;color:var(--red)">Lowest</span></td>
+        <td style="font-family:&#39;Syne&#39;,sans-serif;font-weight:600;color:var(--red)">₹8.8L</td>
+        <td><span class="sal-bar" style="width:57%;background:var(--red)"></span></td>
+        <td style="color:var(--red);font-weight:600">−4.9%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box" style="margin-top:32px">
+    <div class="hl-label">Salary insight</div>
+    <div class="hl-text">Bengaluru pays ₹15.4L average — that's 75% more than Noida's ₹8.8L for the exact same Data Analyst role. Location is your single biggest salary lever.</div>
+    <div class="hl-sub">Always use Median (₹9.25L) as your benchmark — not Mean (₹12.1L) — because a few high-paying outliers inflate the average significantly.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 5 — EXPERIENCE
+══════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">05 — Experience Analysis</div>
+  <h2 class="section-title">Which experience level has the most opportunities?</h2>
+  <p class="section-desc">Grouped avg_exp_years into 5 buckets to map demand across career stages.</p>
+
+  <div class="kpi-row" style="grid-template-columns:repeat(5,1fr)">
+    <div class="kpi" style="--accent-c:#94A3B8;text-align:center">
+      <div class="kpi-val" style="font-size:24px;color:#94A3B8">138</div>
+      <div class="kpi-lbl">0–2 yrs<br><span style="color:#94A3B8;font-weight:600">8.8% — Limited</span></div>
+    </div>
+    <div class="kpi" style="--accent-c:var(--blue);text-align:center">
+      <div class="kpi-val" style="font-size:24px;color:var(--blue)">753</div>
+      <div class="kpi-lbl">2–5 yrs<br><span style="color:var(--blue);font-weight:600">48.2% — Peak 🏆</span></div>
+    </div>
+    <div class="kpi" style="--accent-c:var(--green);text-align:center">
+      <div class="kpi-val" style="font-size:24px;color:var(--green)">509</div>
+      <div class="kpi-lbl">5–8 yrs<br><span style="color:var(--green);font-weight:600">32.6% — Strong</span></div>
+    </div>
+    <div class="kpi" style="--accent-c:var(--orange);text-align:center">
+      <div class="kpi-val" style="font-size:24px;color:var(--orange)">138</div>
+      <div class="kpi-lbl">8–12 yrs<br><span style="color:var(--orange);font-weight:600">8.8% — Senior</span></div>
+    </div>
+    <div class="kpi" style="--accent-c:var(--red);text-align:center">
+      <div class="kpi-val" style="font-size:24px;color:var(--red)">23</div>
+      <div class="kpi-lbl">12+ yrs<br><span style="color:var(--red);font-weight:600">1.5% — Rare</span></div>
+    </div>
+  </div>
+
+  <div class="insights-grid" style="margin-top:24px">
+    <div class="insight">
+      <div class="insight-icon" style="background:#DBEAFE">🎯</div>
+      <div>
+        <div class="insight-title">2–5 years is the sweet spot</div>
+        <div class="insight-text">753 jobs (48.2%) target the 2–5 year band. This is where you get maximum job availability AND decent salary. Aim to reach this milestone as fast as possible.</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-icon" style="background:#FEE2E2">⚠️</div>
+      <div>
+        <div class="insight-title">Fresher market is tough</div>
+        <div class="insight-text">Only 138 jobs (8.8%) accept 0–2 years experience. Freshers face intense competition. Building a strong portfolio project (like this one!) is essential to stand out.</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-icon" style="background:#D1FAE5">📊</div>
+      <div>
+        <div class="insight-title">Salary vs experience correlation: 0.401</div>
+        <div class="insight-text">Moderate positive — more experience generally means higher pay, but it's not guaranteed. Skills, city, and company type matter equally. A 3-yr SQL + Python expert can out-earn a 7-yr generalist.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 6 — CONCLUSIONS & RECOMMENDATIONS
+══════════════════════════════════════ -->
+<div class="section conclusion">
+  <div class="section-num">06 — Conclusions</div>
+  <h2 class="section-title">What this data tells us</h2>
+  <p class="section-desc">5 actionable recommendations based on the analysis — for anyone entering or growing in the data analyst field in India.</p>
+
+  <div class="rec-grid">
+    <div class="rec-card">
+      <div class="rec-num">01</div>
+      <div class="rec-title">Move to or target Bengaluru</div>
+      <div class="rec-text">380 jobs, ₹15.4L avg salary. No other city comes close for both opportunity volume and pay. If relocation is possible, this is the highest-ROI career decision.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">02</div>
+      <div class="rec-title">Master SQL first, then Python</div>
+      <div class="rec-text">SQL appears in 281 listings. It is the single most required skill. Python (154) is the logical next step. Together they cover the majority of technical requirements.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">03</div>
+      <div class="rec-title">Build Power BI dashboard skills</div>
+      <div class="rec-text">Power BI (133 mentions) is the #1 visualisation tool in demand. Knowing SQL + Python + Power BI makes you competitive for 80%+ of job listings in this dataset.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">04</div>
+      <div class="rec-title">Target 2–5 yr experience roles</div>
+      <div class="rec-text">48.2% of all jobs are in this band. Even as a fresher, tailor your resume to appear ready for 2-yr roles by showing projects with real data and business impact.</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-num">05</div>
+      <div class="rec-title">Don't rely on listed salary</div>
+      <div class="rec-text">78% of listings don't disclose salary. Always negotiate. Use ₹9.25L (median) as your benchmark for 2–5 yrs experience. Bengaluru roles can push to ₹15L+.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<div class="footer">
+  <strong>Data Analyst Jobs India — EDA Project</strong> &nbsp;·&nbsp;
+  Dataset: dataAnalystJobsIndia_7th_July_2024.csv &nbsp;·&nbsp;
+  Tools: Python · Pandas · Matplotlib &nbsp;·&nbsp;
+  1,561 listings · 8 analyses
+</div>
+
+
+
+</body></html>
