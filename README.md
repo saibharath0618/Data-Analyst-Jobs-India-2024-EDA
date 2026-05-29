@@ -9,7 +9,7 @@
 ## 🖼️ Project Preview
 | | |
 |---|---|
-| ![](charts/chart1_jobs_by_city.png) | ![](charts/chart2_top_skills.png) |
+| ![](chart1_jobs_by_city.png) | ![](charts/chart2_top_skills.png) |
 | ![](charts/chart3_salary.png) | ![](charts/chart4_experience.png) |
 
 ## 🔍 About
